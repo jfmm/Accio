@@ -1,0 +1,18 @@
+/*
+* Utility functions and mixins for theme
+*/
+
+// Load Google Font if it's defined in _config file
+
+@if variable-exists(font-url--google ) {
+  @import url($font-url--google);
+}
+
+
+// Convert px to em
+
+@function convertToEm($target, $context: $base__font-size) {
+  
+  @return ($target / $context ) * 1em;
+
+}
