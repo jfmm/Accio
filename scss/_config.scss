@@ -5,15 +5,15 @@
 */
 
 // Font Stack definition
-
-$font-family--primary   : "Helvetica Nueue", Helvetica, Arial, sans-serif;
+$font-url--google       : "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";// declare variable with google fonts URL if using fonts from Google
+$font-family--primary   : "Roboto", Helvetica, Arial, sans-serif;
 
 
 // Font Weights
 
 $font-weight--light     : 100;
 $font-weight--regular   : 400;
-$font-weight--medium    : 600;
+$font-weight--medium    : 500;
 $font-weight--bold      : 700;
 
 
