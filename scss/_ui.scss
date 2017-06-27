@@ -1,0 +1,40 @@
+/*
+* .navBar class definition
+*/
+nav.navBar {
+  background-color: $dimGray;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    li {
+      float: left;
+      padding: convertToEm(7px, 20px);
+      a {
+        display: block;
+        padding: convertToEm(8px, 16px);
+        text-decoration: none;
+        text-align: center;
+        
+        &:focus {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+      
+      
+    }
+    
+  }
+}
+
+
+
+nav.navBar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

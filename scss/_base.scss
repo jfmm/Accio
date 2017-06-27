@@ -6,3 +6,10 @@ body {
     color: $blue;
   }
 }
+
+
+main {
+  p {
+    line-height: $base__line-height;
+  }
+}
