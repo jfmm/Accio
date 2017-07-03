@@ -414,7 +414,8 @@ main p {
 * .navBar class definition
 */
 nav.navBar {
-  background-color: #e9e9e9; }
+  background-color: #222;
+  transition: 0.5s ease-in all; }
   nav.navBar ul {
     list-style-type: none;
     margin: 0;
@@ -422,7 +423,8 @@ nav.navBar {
     overflow: hidden; }
     nav.navBar ul li {
       float: left;
-      padding: 0.35em; }
+      padding: 0.35em;
+      width: 20%; }
       nav.navBar ul li a {
         display: block;
         padding: 0.5em;
@@ -436,5 +438,13 @@ nav.navBar--fixed {
   position: fixed;
   top: 0;
   left: 0; }
+
+nav.navBar--drop-down ul li > ul {
+  display: none; }
+nav.navBar--drop-down ul li:hover > ul {
+  display: block; }
+nav.navBar--drop-down ul li > ul > li {
+  float: none;
+  width: inherit; }
 
 /*# sourceMappingURL=main.css.map */

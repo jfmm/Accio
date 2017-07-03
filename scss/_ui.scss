@@ -2,8 +2,8 @@
 * .navBar class definition
 */
 nav.navBar {
-  background-color: $dimGray;
-
+  background-color: $black;
+  transition: $default-transition-props;
   ul {
     list-style-type: none;
     margin: 0;
@@ -13,6 +13,7 @@ nav.navBar {
     li {
       float: left;
       padding: convertToEm(7px, 20px);
+      width: 20%; // dynamically calc the width of these
       a {
         display: block;
         padding: convertToEm(8px, 16px);
@@ -37,4 +38,28 @@ nav.navBar--fixed {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+
+nav.navBar--drop-down {
+  // hide the nested menus
+  & ul li > ul {
+    display: none;
+  }
+  
+  // show the nested menus on hover
+  & ul li:hover {
+    & > ul {
+      display: block;
+     
+    }
+  }
+  
+  
+  
+  & ul li > ul > li {
+    float: none;
+    width: inherit;
+  }
+  
 }
