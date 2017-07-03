@@ -1,5 +1,5 @@
 /*
-* Utility functions and mixins for theme
+* Utility functions, mixins and classes for Accio
 */
 
 // Load Google Font if it's defined in _config file
@@ -15,4 +15,16 @@
   
   @return ($target / $context ) * 1em;
 
+}
+
+// Visually hidden helper class
+/*------------------------------
+The .visually-hidden class invokes a special set of properties, carefully devised to hide the element visually without it becoming silenced in screen reader software 	
+------------------*/
+.visually-hidden {
+  position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
 }

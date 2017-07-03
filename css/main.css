@@ -399,8 +399,18 @@ template {
 * Provides base styles for font stacks, font-weights, colors, and typography. 
 */
 /*
-* Utility functions and mixins for theme
+* Utility functions, mixins and classes for Accio
 */
+/*------------------------------
+The .visually-hidden class invokes a special set of properties, carefully devised to hide the element visually without it becoming silenced in screen reader software 	
+------------------*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: #222; }
@@ -415,16 +425,21 @@ main p {
 */
 nav.navBar {
   background-color: #222;
-  transition: 0.5s ease-in all; }
+  transition: 0.2s ease-in all; }
   nav.navBar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: 0.2s ease-in all; }
     nav.navBar ul li {
       float: left;
       padding: 0.35em;
-      width: 20%; }
+      width: 20%;
+      transition: 0.2s ease-in all; }
+      nav.navBar ul li a.current-page {
+        background-color: #e9e9e9;
+        text-decoration: underline; }
       nav.navBar ul li a {
         display: block;
         padding: 0.5em;
@@ -445,6 +460,10 @@ nav.navBar--drop-down ul li:hover > ul {
   display: block; }
 nav.navBar--drop-down ul li > ul > li {
   float: none;
-  width: inherit; }
+  width: inherit;
+  border-top: 1px solid #fff; }
+  nav.navBar--drop-down ul li > ul > li:hover {
+    background-color: #e9e9e9;
+    color: #222; }
 
 /*# sourceMappingURL=main.css.map */
